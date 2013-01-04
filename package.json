@@ -1,0 +1,23 @@
+{
+  "name":     "pathmatcher",
+  "version":  "0.0.1",
+  "author":   "Jean-Charles Sisk <jsisk@paypal.com>",
+  "private":  true,
+  "licenses": [
+    {
+      "type": "MIT",
+      "url":  "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "engines": {
+    "node": "0.8.x"
+  },
+  "scripts": {
+    "test":   "./node_modules/mocha/bin/mocha"
+  },
+  "devDependencies":{
+    "mocha":  "latest",
+    "should": "latest"
+  }
+}
+
