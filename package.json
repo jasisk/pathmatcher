@@ -15,9 +15,12 @@
   "scripts": {
     "test":   "./node_modules/mocha/bin/mocha"
   },
-  "devDependencies":{
+  "devDependencies": {
     "mocha":  "latest",
     "should": "latest"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.paypal.com/jsisk/pathmatcher.git"
   }
 }
-
