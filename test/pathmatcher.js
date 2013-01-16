@@ -88,6 +88,27 @@ describe('PathMatcher', function () {
 
     });
 
+    describe('Constructor', function() {
+        var stub;
+        before(function() {
+            stub = sinon.stub(PathMatcher.prototype, '_sanitizeFilters');
+            stub.returnsArg(0);
+        });
+
+        beforeEach(function() {
+            stub.reset();
+        });
+
+        after(function() {
+            stub.restore();
+        });
+
+        it('should set the internal _filter property', function() {
+            var pm = new PathMatcher(regExFilter);
+            pm._filters = regExFilter;
+        });
+    });
+
     describe('#match', function() {
         it('should be api consistant with node', function(done) {
             var pm = new PathMatcher(regExFilter);
