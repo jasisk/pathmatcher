@@ -1,1 +1,1 @@
-module.exports = require('./lib/filefilter');
+module.exports = require('./lib/pathmatcher');

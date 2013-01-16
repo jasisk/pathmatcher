@@ -1,6 +1,6 @@
 {
   "name":     "pathmatcher",
-  "version":  "0.0.1",
+  "version":  "0.0.2-dev",
   "author":   "Jean-Charles Sisk <jsisk@paypal.com>",
   "private":  true,
   "licenses": [
@@ -17,7 +17,8 @@
   },
   "devDependencies": {
     "mocha":  "latest",
-    "should": "latest"
+    "should": "latest",
+    "sinon":  "latest"
   },
   "repository": {
     "type" : "git",
