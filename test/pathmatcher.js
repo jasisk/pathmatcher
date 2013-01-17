@@ -202,6 +202,32 @@ describe('PathMatcher', function () {
                 done();
             });
         });
+        it('should fail fast', function(done) {
+            var spy = sinon.spy();
+            var pm = new PathMatcher({
+                fakeTest: function(input, done){
+                    spy();
+                    done(false);
+                },
+                fullPath: function(input, done){
+                    process.nextTick(function(){
+                        spy();
+                        done(regExFilter.test(input));
+                    });
+                },
+                different: function(input, done){
+                    spy();
+                    done(true);
+                }
+            });
+
+            pm.match('/testpath/omg.omg', function(err, result) {
+                should.not.exist(err);
+                result.should.be.false;
+                spy.callCount.should.be.below(3);
+                done();
+            });
+        });
     });
     describe('#matchSync', function(){
         it.skip('should work exactly like match but block and return', function(){
