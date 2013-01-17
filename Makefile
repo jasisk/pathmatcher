@@ -1,5 +1,5 @@
-MOCHA_OPTS =
-REPORTER = spec
+MOCHA_OPTS=
+REPORTER=dot
 
 check: test
 
