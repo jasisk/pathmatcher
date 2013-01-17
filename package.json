@@ -13,7 +13,7 @@
     "node": "0.8.x"
   },
   "scripts": {
-    "test":   "./node_modules/mocha/bin/mocha"
+    "test":   "make test"
   },
   "devDependencies": {
     "mocha":  "latest",
