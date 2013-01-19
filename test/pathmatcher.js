@@ -230,7 +230,7 @@ describe('PathMatcher', function () {
         });
     });
     describe('#matchSync', function(){
-        it.skip('should work exactly like match but block and return', function(){
+        it('should work exactly like match but block and return', function(){
             var pm = new PathMatcher({fullPath: function(input){
                 return regExFilter.test(input);
             }});
@@ -239,6 +239,15 @@ describe('PathMatcher', function () {
             pm.matchSync('/omgomg/omg.omg').should.be.false;
             (function(){pm.matchSync(null);}).should.throw();
 
+        });
+        it('should fail when given an async matcher', function(){
+            var pm = new PathMatcher({fullPath: function(input, done){
+                setTimeout(function() {
+                    done(regExFilter.test(input));
+                }, 0);
+            }});
+
+            (function(){pm.matchSync('/testpath/test.tmp');}).should.throw();
         });
     });
 });
