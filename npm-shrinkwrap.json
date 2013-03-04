@@ -1,0 +1,66 @@
+{
+  "name": "pathmatcher",
+  "version": "0.0.2-dev",
+  "dependencies": {
+    "should": {
+      "version": "1.2.1",
+      "from": "should@latest"
+    },
+    "mocha": {
+      "version": "1.8.1",
+      "from": "mocha@latest",
+      "dependencies": {
+        "commander": {
+          "version": "0.6.1",
+          "from": "commander@0.6.1"
+        },
+        "growl": {
+          "version": "1.7.0",
+          "from": "growl@1.7.x"
+        },
+        "jade": {
+          "version": "0.26.3",
+          "from": "jade@0.26.3",
+          "dependencies": {
+            "mkdirp": {
+              "version": "0.3.0",
+              "from": "mkdirp@0.3.0"
+            }
+          }
+        },
+        "diff": {
+          "version": "1.0.2",
+          "from": "diff@1.0.2"
+        },
+        "debug": {
+          "version": "0.7.0",
+          "from": "debug@*"
+        },
+        "mkdirp": {
+          "version": "0.3.3",
+          "from": "mkdirp@0.3.3"
+        },
+        "ms": {
+          "version": "0.3.0",
+          "from": "ms@0.3.0"
+        }
+      }
+    },
+    "sinon": {
+      "version": "1.5.2",
+      "from": "sinon@latest",
+      "dependencies": {
+        "buster-format": {
+          "version": "0.5.5",
+          "from": "buster-format@~0.5",
+          "dependencies": {
+            "buster-core": {
+              "version": "0.6.4",
+              "from": "buster-core@>=0.6.2"
+            }
+          }
+        }
+      }
+    }
+  }
+}
