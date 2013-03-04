@@ -16,9 +16,9 @@
     "test":   "make test"
   },
   "devDependencies": {
-    "mocha":  "latest",
-    "should": "latest",
-    "sinon":  "latest"
+    "mocha":  "*",
+    "should": "*",
+    "sinon":  "*"
   },
   "repository": {
     "type" : "git",
